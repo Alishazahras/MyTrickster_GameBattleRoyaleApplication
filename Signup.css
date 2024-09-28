@@ -1,0 +1,274 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+.header{
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 2%;
+    background: #27204d;
+}
+
+.header .navbar{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .navbar a{
+    display: inline-block;
+    padding: .5rem 1rem;
+    font-size:17px;
+    font-weight: 600;
+    color: whitesmoke;
+
+}
+
+.header .navbar a:hover{
+    border-bottom: 2px solid whitesmoke;
+}
+
+#menu-icon{
+    color: whitesmoke;
+    font-size: 35px;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+
+/* sign up */
+.signup{
+  background: #27204d;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 115vh;
+  margin: 0;
+}
+
+.container{
+    margin-top: 5rem;
+    min-height:50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* width: 50%; */
+    padding: 40px;
+    background-color: #fff;
+    border: #ccc;
+    border-radius: 8px;
+    position: relative;
+}
+
+/* .container h2{
+    display: flex;
+    align-items: center;
+    margin-right: 50rem; 
+    font-size: .9rem;
+} */
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.container h3{
+    font-size: 25px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.error-message {
+  color: red;
+  font-size: 15px;
+}
+
+button {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+button:hover{
+    background-color:#133481d7;
+}
+
+
+/* footer */
+footer{
+    background: #27204d;
+}
+
+.footerCont{
+    width: 100%;
+    padding: 70px 30px 20px;
+}
+
+.social-icn{
+    display: flex;
+    justify-content: center;
+}
+
+.social-icn a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: whitesmoke ;
+    margin: 10px;
+    border-radius: 50%;
+
+}
+.social-icn a i{
+    font-size: 2em;
+    color: #27204d;
+    opacity: 0.9;
+}
+
+.social-icn a:hover{
+    background-color: #27204d;
+    transition: 0.5s;
+}
+.social-icn a:hover i{
+    color: whitesmoke;
+    transition: 0.5s;
+}
+
+.foteerNav{
+    margin: 30px 0;
+}
+
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+}
+.footerNav ul li a{
+    color: whitesmoke;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+.footerNav ul li a:hover{
+    border-bottom: 2px solid whitesmoke ;
+}
+
+@media(max-width: 800px){
+    html{
+        font-size: 80%;
+    }
+
+    #menu-icon{
+        display: inline-block;
+    }
+
+    .header .navbar{
+        position:absolute;
+        top:99%;
+        left: 0;
+        right: 0;
+        border-top: var(--border);
+        background: #27204d;
+        padding: 1rem .5rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: .3s linear;
+    }
+
+    .header .navbar.active{
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    
+    .header .navbar a{
+        display: block;
+        padding: 1.3rem 1.8rem;
+    } 
+
+    .container{
+        margin-top: 5rem;
+        min-height:50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .container h3{
+        font-size: 25px;
+    }
+    
+    label {
+      font-size: 20px;
+    }
+    
+    button {
+        font-size: 10px;
+      }
+
+    .footerNav ul{
+        flex-direction: column;
+    }
+    .footerNav ul li{
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+}
+
+@media(max-width: 400px){
+    html{
+        font-size: 60%;
+    }
+    .container{
+        margin-top: 5rem;
+        min-height:50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .container h3{
+        font-size: 20px;
+    }
+    
+    label {
+      font-size: 15px;
+    }
+    
+    button {
+        font-size: 10px;
+      }
+}
+
+@media(max-width: 200px){
+    html{
+        font-size: 30%;
+    }
+
+}
+
